@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Conversion">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:layout_marginStart="18sp"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/baseline_arrow_back_ios_24"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/select"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/orange"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconTint="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:layout_constraintVertical_bias="0.053">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:inputType="none"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/valueEdit"
+        style="@style/ThemeOverlay.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Enter Value"
+        android:inputType="numberDecimal"
+        android:maxLength="18"
+        android:padding="18dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <Button
+        android:id="@+id/inputUnit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/inputUnit2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valueEdit"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/orange"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:background = "@null"/>
+
+    <Button
+        android:id="@+id/inputUnit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/inputUnit3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputUnit1"
+        app:layout_constraintTop_toBottomOf="@+id/valueEdit"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:background = "@null"/>
+
+    <Button
+        android:id="@+id/inputUnit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputUnit2"
+        app:layout_constraintTop_toBottomOf="@+id/valueEdit"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/orange"
+        app:background = "@null"/>
+
+    <TextView
+        android:id="@+id/convert_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERT TO"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:padding="18dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputUnit2" />
+
+    <Button
+        android:id="@+id/outputUnit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/outputUnit2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_to"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/orange"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:background = "@null"/>
+
+    <Button
+        android:id="@+id/outputUnit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/outputUnit3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputUnit1"
+        app:layout_constraintTop_toBottomOf="@+id/convert_to"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:background = "@null"/>
+
+    <Button
+        android:id="@+id/outputUnit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outputUnit2"
+        app:layout_constraintTop_toBottomOf="@+id/convert_to"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/orange"
+        app:background = "@null"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERT TO"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:padding="18dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputUnit2" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

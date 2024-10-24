@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Calculator GDSC</string>
+    <string name="placeholderNums">0</string>
+    <string name="divideIcon">"\u00F7"</string>
+    <string name="select">"Convert"</string>
+    <string name="meter">m</string>
+    <string name="mile">mi</string>
+    <string name="feet">ft</string>
+    <string name="kilogram">kg</string>
+    <string name="ounce">oz</string>
+    <string name="pound">lb</string>
+    <string name="kelvin">K</string>
+    <string name="celsius">°C</string>
+    <string name="fahrenheit">°F</string>
+    <string name="error">Error</string>
+</resources>
